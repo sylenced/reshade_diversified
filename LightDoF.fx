@@ -1,34 +1,5 @@
 /*
-	Light Depth of Field by luluco250
-	
-	Poisson disk blur by spite ported from: https://github.com/spite/Wagner/blob/master/fragment-shaders/poisson-disc-blur-fs.glsl
-	
-	Why "light"?
-	Because I wanted a DoF shader that didn't tank my GPU and didn't take rocket science to configure.
-	Also with delayed auto focus like in ENB.
-	
-	License: https://creativecommons.org/licenses/by-sa/4.0/
-	CC BY-SA 4.0
-	
-	You are free to:
-
-	Share — copy and redistribute the material in any medium or format
-		
-	Adapt — remix, transform, and build upon the material
-	for any purpose, even commercially.
-
-	The licensor cannot revoke these freedoms as long as you follow the license terms.
-		
-	Under the following terms:
-
-	Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. 
-	You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-
-	ShareAlike — If you remix, transform, or build upon the material, 
-	you must distribute your contributions under the same license as the original.
-
-	No additional restrictions — You may not apply legal terms or technological measures 
-	that legally restrict others from doing anything the license permits.
+	Light Depth of Field
 */
 
 #include "ReShade.fxh"
@@ -104,7 +75,6 @@ uniform float2 f2LightDoF_MouseCoord <source="mousepoint";>;
 	For those curious...
 	
 	Two textures are needed in order to delay focus.
-	I just lerp between them by a speed.
 */
 
 //texture for saving the current frame's focus
